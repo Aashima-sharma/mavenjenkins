@@ -6,11 +6,5 @@
       <class name="mavenforjenkins.UITest"/>  
     </classes>
   </test> 
-  <test name="Regression1"   >
-        <!--parameter name="browser" value="firefox"/-->
-        <parameter name="url" value="https://qavbox.github.io/demo"/>
-        <classes>
-            <class name="testNgLearning.parameter.SampleParameterTest"/>
-        </classes>
-    <test>
+  
 </suite> 
