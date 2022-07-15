@@ -14,6 +14,11 @@ public class UITest
 
 	@Parameters("Browser")
 	@Test
+	public void parameterTest(@Optional("chrome") String browserName,String browserUrl) 
+	{
+          System.out.println("Browser used : " + browserName);
+          System.out.println("url under test : " + browserUrl);
+        }
 	public void startBrowser(String browserName)
 	{
 		System.out.println("Parameter value is "+browserName);
