@@ -11,15 +11,15 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class UITest 
 {
-        @Test("Browser")
+        @Test
 	@Parameters("Browser")
 	
-	public void startBrowser(String browserName)
+	public void startBrowser(String Browser)
 	{
-		System.out.println("Parameter value is "+browserName);
+		System.out.println("Parameter value is "+Browser);
 		WebDriver driver=null;
 		
-		if(browserName.contains("Chrome"))
+		if(Browser.contains("Chrome"))
 		{
 			WebDriverManager.chromedriver().setup();
 			ChromeOptions opt=new ChromeOptions();
@@ -28,7 +28,7 @@ public class UITest
 			opt.addArguments("--disable-dev-shm-usage");
 			driver=new ChromeDriver(opt);
 		}
-		else if(browserName.contains("Edge"))
+		else if(Browser.contains("Edge"))
 		{
 			WebDriverManager.edgedriver().setup();
 			 driver=new EdgeDriver();
